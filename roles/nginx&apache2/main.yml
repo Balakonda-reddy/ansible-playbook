@@ -1,0 +1,9 @@
+---
+- name: Install NGINX and Apache
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - nginx
+    - apache2
+  tags: web_servers

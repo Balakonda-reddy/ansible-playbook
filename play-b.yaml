@@ -1,0 +1,12 @@
+---
+- name: Install Software on Ubuntu
+  hosts:
+    - worker-node-1
+    - worker-node-2
+    # Add 'all' to add all hosts 
+  become: true
+
+  roles:
+    - aws-cli
+    - nginx&apache2
+    - docker
